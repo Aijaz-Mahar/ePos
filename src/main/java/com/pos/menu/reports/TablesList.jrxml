@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TablesList" pageWidth="300" pageHeight="842" columnWidth="298" leftMargin="1" rightMargin="1" topMargin="1" bottomMargin="1" uuid="6b720524-66cf-483a-b1e5-f1fefddba34a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tables]]>
+	</queryString>
+	<field name="TABLEID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TABLENAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DESCRIPTION" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="105" y="0" width="88" height="20" uuid="be31879f-c35b-4bc6-9a62-49473e431b0a"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[List of Tables]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="298" height="1" uuid="252088c0-ea02-4308-ada8-dc0e130f49ee"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="52" height="15" uuid="9ec0fac1-0b07-44e0-bf7a-df99784319d2"/>
+				<text><![CDATA[TABLE ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="0" width="48" height="15" uuid="513004b6-798c-422d-83b2-3228698bfae6"/>
+				<text><![CDATA[TABLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="0" width="72" height="15" uuid="a6493382-efb7-421a-ac2b-5e44911b56a0"/>
+				<text><![CDATA[DESCRIPTION]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="17" width="298" height="1" uuid="5d692515-7c1c-4183-9c93-34dbc052fe39"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="57" height="20" uuid="c04c1093-96a5-413e-bbe4-182179cbf3a8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TABLEID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="0" width="48" height="20" uuid="f04b57d5-2ca9-4dc2-8d85-2bb3ecd2655f"/>
+				<textFieldExpression><![CDATA[$F{TABLENAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="0" width="72" height="20" uuid="b12b9c87-9e82-418f-a46f-1676cee851cb"/>
+				<textFieldExpression><![CDATA[$F{DESCRIPTION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
