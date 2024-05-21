@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *         
- * @author User
+ * @author aijazmahar
  */
 public class DbConnect {
     // apache derby
